@@ -10,3 +10,6 @@ Start with `home.html` page and split it into several components. One for header
 
 When you are going to test the application you will notice that the pictures are broken. In order to fix that we need to move the `content` folder from the `Artifacts` folder to the `src` folder and mark it as an asset folder. (Hint! Look into the `.angular.cli.json` to see how).
  
+ # Lab 3
+
+ In this lab we are going to use interpolation binding, one way binding, `*ngIf`, and `*ngForOf` to create a data driven weekly menu. (Helpful hint: `*ngForOf` presents several exported variables, such as index, odd, even ...)
