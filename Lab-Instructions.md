@@ -22,3 +22,6 @@ In this lab we are going to convert the hard-coded image path into a pipe (Hint 
 
 In this lab we are going to use ViewChild and view lifecycle hooks to pass data to the children components.
 
+# Lab 6
+
+In this lab we are going to create a simple service to return the data and we are going to use DI to inject it into the components
