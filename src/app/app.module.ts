@@ -11,6 +11,7 @@ import { WeeklyMenuComponent } from './weekly-menu/weekly-menu.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
 import { InstructionsComponent } from './instructions/instructions.component';
 import { ImagePipe } from './image.pipe';
+import { RecipeService } from './recipe.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { ImagePipe } from './image.pipe';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [RecipeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
