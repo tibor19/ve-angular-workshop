@@ -8,6 +8,8 @@ import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { WeeklyMenuComponent } from './weekly-menu/weekly-menu.component';
+import { IngredientsComponent } from './ingredients/ingredients.component';
+import { InstructionsComponent } from './instructions/instructions.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { WeeklyMenuComponent } from './weekly-menu/weekly-menu.component';
     NavComponent,
     HomeComponent,
     RecipeComponent,
-    WeeklyMenuComponent
+    WeeklyMenuComponent,
+    IngredientsComponent,
+    InstructionsComponent
   ],
   imports: [
     BrowserModule

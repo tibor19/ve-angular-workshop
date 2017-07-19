@@ -19,17 +19,7 @@
         <img class="recipe-image" src="content/images/food/{{recipe.image}}.jpg" />
       </div>
     </div>
-    <h3>Ingredients</h3>
-    <ul class="ingredientsList">
-      <li *ngFor="let ingredient of recipe.recipeIngredients">
-        {{ingredient.amount}} {{ingredient.amountType}} {{ingredient.ingredient?.name}}
-      </li>
-    </ul>
-    <h3>Instructions</h3>
-    <ol>
-      <li *ngFor="let instruction of recipe.recipeInstructions">
-        {{instruction.instructionText}}
-      </li>
-    </ol>
+    <app-ingredients [ingredients]="recipe.recipeIngredients"></app-ingredients>
+    <app-instructions [instructions]="recipe.recipeInstructions"></app-instructions>
   </div>
 </article>
