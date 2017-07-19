@@ -10,6 +10,7 @@ import { RecipeComponent } from './recipe/recipe.component';
 import { WeeklyMenuComponent } from './weekly-menu/weekly-menu.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
 import { InstructionsComponent } from './instructions/instructions.component';
+import { ImagePipe } from './image.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { InstructionsComponent } from './instructions/instructions.component';
     RecipeComponent,
     WeeklyMenuComponent,
     IngredientsComponent,
-    InstructionsComponent
+    InstructionsComponent,
+    ImagePipe
   ],
   imports: [
     BrowserModule

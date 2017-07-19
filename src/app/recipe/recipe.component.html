@@ -16,7 +16,7 @@
         </table>
       </div>
       <div class="box-image float-left">
-        <img class="recipe-image" src="content/images/food/{{recipe.image}}.jpg" />
+        <img class="recipe-image" [src]="recipe.image | image" />
       </div>
     </div>
     <app-ingredients [ingredients]="recipe.recipeIngredients"></app-ingredients>
