@@ -13,3 +13,8 @@ When you are going to test the application you will notice that the pictures are
  # Lab 3
 
  In this lab we are going to use interpolation binding, one way binding, `*ngIf`, and `*ngForOf` to create a data driven weekly menu. (Helpful hint: `*ngForOf` presents several exported variables, such as index, odd, even ...)
+
+# Lab 4
+
+In this lab we are going to convert the hard-coded image path into a pipe (Hint look at ng g p)
+
