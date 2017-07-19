@@ -18,3 +18,7 @@ When you are going to test the application you will notice that the pictures are
 
 In this lab we are going to convert the hard-coded image path into a pipe (Hint look at ng g p)
 
+# Lab 5
+
+In this lab we are going to use ViewChild and view lifecycle hooks to pass data to the children components.
+
