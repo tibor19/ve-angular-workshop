@@ -16,5 +16,5 @@ When you are going to test the application you will notice that the pictures are
 
 # Lab 4
 
-In this lab we are going to convert the hard-coded image path into a pipe (Hint look at ng c p)
+In this lab we are going to convert the hard-coded image path into a pipe (Hint look at ng g p)
 
