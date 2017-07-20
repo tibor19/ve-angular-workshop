@@ -2,7 +2,7 @@
 
   <h2>Weekly Menu</h2>
 
-  <div class="box" *ngFor="let recipe of recipes; let odd = odd; let index = index">
+  <div class="box" *ngFor="let recipe of recipes | async; let odd = odd; let index = index">
     <a href="#/recipe/{{recipe.recipeId}}">
       <div [ngClass]="{'box-content': true, 'float-right': odd, 'float-left': !odd}">
         <h2>{{weekDays[index % 7]}}</h2>

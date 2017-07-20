@@ -12,6 +12,7 @@ import { IngredientsComponent } from './ingredients/ingredients.component';
 import { InstructionsComponent } from './instructions/instructions.component';
 import { ImagePipe } from './image.pipe';
 import { RecipeService } from './recipe.service';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,9 +28,9 @@ import { RecipeService } from './recipe.service';
     ImagePipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule, HttpClientModule
   ],
-  providers: [RecipeService],
+  providers: [RecipeService, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -18,11 +18,11 @@ export class RecipeComponent implements OnInit, AfterContentInit {
   constructor(private recipeService: RecipeService) { }
 
   ngOnInit() {
-    this.recipe = this.recipeService.getRecipe();
+    this.recipeService.getRecipe().subscribe(data => this.recipe = data);
   }
 
   ngAfterContentInit(): void {
-    this.ingredientsComponent.ingredients = this.recipe.recipeIngredients;
+    // this.ingredientsComponent.ingredients = this.recipe.recipeIngredients;
   }
 
 }
