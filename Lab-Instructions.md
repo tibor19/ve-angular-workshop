@@ -29,4 +29,8 @@ In this lab we are going to create a simple service to return the data and we ar
 # Lab 7
 
 In this lab we are going to http to get the data from the backend. In order to do that you need to move the data folder to the assets folder and then you can `get` the data directly by using `/assets/data/recipe.json` as url.
- 
+
+# Lab 8
+
+In this lab we are going to implement routing into our application. 
+  
