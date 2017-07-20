@@ -17,8 +17,8 @@ export class RecipeComponent implements OnInit, AfterContentInit {
 
   constructor(private recipeService: RecipeService) { }
 
-  ngOnInit() {
-    this.recipeService.getRecipe().subscribe(data => this.recipe = data);
+  async ngOnInit() {
+    this.recipe = await this.recipeService.getRecipe().toPromise(); // .then(data => this.recipe = data);
   }
 
   ngAfterContentInit(): void {
