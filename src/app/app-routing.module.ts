@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { environment } from '../environments/environment';
+import { CanDeactivateRecipe } from './can-deactivate-recipe';
 import { RecipeResolver } from './recipe-resolver';
 import { HomeComponent } from './home/home.component';
 import { RecipeComponent } from './recipe/recipe.component';
@@ -20,7 +22,8 @@ const routes: Routes = [
     component: RecipeComponent,
     resolve: {
       recipe: RecipeResolver
-    }
+    },
+    canDeactivate: [CanDeactivateRecipe]
   },
   {
     path: 'weekly-menu',
@@ -29,8 +32,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {enableTracing: !environment.production})],
   exports: [RouterModule],
-  providers: [RecipeResolver]
+  providers: [RecipeResolver, CanDeactivateRecipe]
 })
 export class AppRoutingModule { }

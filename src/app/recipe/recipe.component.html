@@ -22,4 +22,5 @@
     <app-ingredients [ingredients]="recipe.recipeIngredients"></app-ingredients>
     <app-instructions [instructions]="recipe.recipeInstructions"></app-instructions>
   </div>
+  <input type="checkbox" [value]="leave" (change)="leave = $event.target.checked" />
 </article>
