@@ -8,7 +8,7 @@ export class RecipeService {
 
   constructor(private http: HttpClient) { }
 
-  getRecipe(): Observable<IRecipe> {
+  getRecipe(id: number): Observable<IRecipe> {
     return this.http.get<IRecipe>('/assets/data/recipe.json');
   }
 

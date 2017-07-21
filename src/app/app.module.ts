@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -12,7 +14,7 @@ import { IngredientsComponent } from './ingredients/ingredients.component';
 import { InstructionsComponent } from './instructions/instructions.component';
 import { ImagePipe } from './image.pipe';
 import { RecipeService } from './recipe.service';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { UserService } from './user.service';
 
 @NgModule({
   declarations: [
@@ -28,9 +30,11 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     ImagePipe
   ],
   imports: [
-    BrowserModule, HttpClientModule
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [RecipeService, HttpClient],
+  providers: [RecipeService, HttpClient, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
