@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
+import { RecipeResolver } from './recipe-resolver';
 import { HomeComponent } from './home/home.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { WeeklyMenuComponent } from './weekly-menu/weekly-menu.component';
@@ -15,7 +17,10 @@ const routes: Routes = [
   },
   {
     path: 'recipe/:id',
-    component: RecipeComponent
+    component: RecipeComponent,
+    resolve: {
+      recipe: RecipeResolver
+    }
   },
   {
     path: 'weekly-menu',
@@ -25,6 +30,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [RecipeResolver]
 })
 export class AppRoutingModule { }
