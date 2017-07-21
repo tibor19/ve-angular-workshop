@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { environment } from '../environments/environment';
+import { CanActivateAuth } from './can-activate-auth';
 import { CanDeactivateRecipe } from './can-deactivate-recipe';
 import { RecipeResolver } from './recipe-resolver';
 import { HomeComponent } from './home/home.component';
@@ -27,13 +28,14 @@ const routes: Routes = [
   },
   {
     path: 'weekly-menu',
-    component: WeeklyMenuComponent
+    component: WeeklyMenuComponent,
+    canActivate: [CanActivateAuth]
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {enableTracing: !environment.production})],
   exports: [RouterModule],
-  providers: [RecipeResolver, CanDeactivateRecipe]
+  providers: [RecipeResolver, CanDeactivateRecipe, CanActivateAuth]
 })
 export class AppRoutingModule { }
