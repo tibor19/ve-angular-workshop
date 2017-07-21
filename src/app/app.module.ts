@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { InstructionsComponent } from './instructions/instructions.component';
 import { ImagePipe } from './image.pipe';
 import { RecipeService } from './recipe.service';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +28,14 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     WeeklyMenuComponent,
     IngredientsComponent,
     InstructionsComponent,
-    ImagePipe
+    ImagePipe,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [RecipeService, HttpClient],
   bootstrap: [AppComponent]

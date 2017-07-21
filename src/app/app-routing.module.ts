@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { WeeklyMenuComponent } from './weekly-menu/weekly-menu.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'weekly-menu',
     component: WeeklyMenuComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
   }
 ];
 
