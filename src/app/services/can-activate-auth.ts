@@ -12,7 +12,7 @@ export class CanActivateAuth implements CanActivate {
   }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | Observable<boolean> | Promise<boolean> {
-    console.log("Authenticating");
+    console.log('Authenticating');
     return this.userService.isAuthenticated();
   }
 }
